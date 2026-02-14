@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Vaishnavi Buildcon's portfolio of successful construction projects - residential, commercial, and more.">
+    <title>Our Projects - Vaishnavi Buildcon</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .project-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition-smooth);
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-gold);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(26, 26, 46, 0.7), rgba(22, 33, 62, 0.7)),
+                url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(212,175,55,0.2)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+        }
+        
+        .project-image i {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-info {
+            padding: var(--spacing-md);
+        }
+        
+        .project-category {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: linear-gradient(135deg, var(--primary-gold), var(--accent-gold));
+            color: var(--primary-dark);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .project-stats {
+            display: flex;
+            gap: var(--spacing-sm);
+            flex-wrap: wrap;
+            margin-top: var(--spacing-sm);
+            padding-top: var(--spacing-sm);
+            border-top: 1px solid var(--medium-gray);
+        }
+        
+        .project-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .project-stat i {
+            color: var(--primary-gold);
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏗️</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" style="display: flex; align-items: center;">
+                <img src="Vaishnavi Buildcon (Logo).png" alt="Vaishnavi Buildcon" style="height: 50px; width: auto; filter: brightness(1.2);">
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="hero" style="height: 50vh; min-height: 400px;">
+        <div class="hero-content">
+            <h1>Our <span class="hero-highlight">Projects</span></h1>
+            <p class="hero-subtitle">Excellence Delivered, Success Stories Built</p>
+        </div>
+    </section>
+
+    <!-- Projects Introduction -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">OUR PORTFOLIO</div>
+                <h2 class="section-title">Building Dreams into Reality</h2>
+                <p class="section-description">
+                    Explore our diverse portfolio of successful projects that showcase our commitment 
+                    to quality, precision, and client satisfaction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="card-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Luxury Villa Construction</h3>
+                        <p>A stunning 3-story luxury villa featuring modern architecture, premium finishes, and sustainable design elements.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-ruler-combined"></i>
+                                4,500 sq.ft
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2025
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Corporate Office Building</h3>
+                        <p>Modern office complex with state-of-the-art facilities, designed for productivity and employee comfort.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-ruler-combined"></i>
+                                15,000 sq.ft
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2025
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Residential Apartment Complex</h3>
+                        <p>24-unit apartment complex with modern amenities, landscaped gardens, and dedicated parking spaces.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-home"></i>
+                                24 Units
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-store"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Premium Retail Showroom</h3>
+                        <p>Elegant showroom space with eye-catching facade, strategic lighting, and customer-friendly layout.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-ruler-combined"></i>
+                                8,000 sq.ft
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Renovation</span>
+                        <h3>Heritage Home Restoration</h3>
+                        <p>Complete restoration of a heritage property, preserving its character while adding modern conveniences.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-ruler-combined"></i>
+                                3,200 sq.ft
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2024
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-house-user"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Modern Duplex Construction</h3>
+                        <p>Contemporary duplex design with spacious interiors, private terraces, and energy-efficient features.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-ruler-combined"></i>
+                                5,500 sq.ft
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2023
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Industrial</span>
+                        <h3>Warehouse & Storage Facility</h3>
+                        <p>Large-scale warehouse with optimized storage systems, loading docks, and security infrastructure.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-ruler-combined"></i>
+                                25,000 sq.ft
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2023
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Commercial</span>
+                        <h3>Boutique Hotel Construction</h3>
+                        <p>Elegant boutique hotel with 20 rooms, rooftop dining area, and luxury amenities for guests.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-bed"></i>
+                                20 Rooms
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Completed 2023
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Residential</span>
+                        <h3>Gated Community Development</h3>
+                        <p>Exclusive gated community with 30 premium villas, clubhouse, swimming pool, and landscaped parks.</p>
+                        <div class="project-stats">
+                            <span class="project-stat">
+                                <i class="fas fa-home"></i>
+                                30 Villas
+                            </span>
+                            <span class="project-stat">
+                                <i class="fas fa-calendar-check"></i>
+                                Ongoing
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle">CLIENT FEEDBACK</div>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            
+            <div class="card-grid">
+                <div class="card" style="padding: var(--spacing-lg);">
+                    <div style="color: var(--primary-gold); font-size: 2rem; margin-bottom: var(--spacing-sm);">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: var(--spacing-sm);">
+                        "Vaishnavi Buildcon transformed our vision into reality. Their attention to detail 
+                        and commitment to quality is unmatched. Highly recommended!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: 700;">
+                            RS
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.2rem;">Rajesh Sharma</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Villa Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: var(--spacing-lg);">
+                    <div style="color: var(--primary-gold); font-size: 2rem; margin-bottom: var(--spacing-sm);">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: var(--spacing-sm);">
+                        "Professional, transparent, and reliable. They delivered our office building on time 
+                        and within budget. Excellent work!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: 700;">
+                            PK
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.2rem;">Priya Kapoor</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Business Owner</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: var(--spacing-lg);">
+                    <div style="color: var(--primary-gold); font-size: 2rem; margin-bottom: var(--spacing-sm);">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p style="font-style: italic; margin-bottom: var(--spacing-sm);">
+                        "From planning to execution, everything was handled perfectly. The quality of construction 
+                        speaks for itself. Very satisfied!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--primary-gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-dark); font-weight: 700;">
+                            AM
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.2rem;">Anil Mehta</h4>
+                            <p style="font-size: 0.9rem; margin: 0;">Apartment Owner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section section-dark">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: var(--white); margin-bottom: var(--spacing-sm);">
+                Let's Build Your Success Story
+            </h2>
+            <p style="color: var(--medium-gray); font-size: 1.2rem; margin-bottom: var(--spacing-md); max-width: 700px; margin-left: auto; margin-right: auto;">
+                Ready to see your project come to life with the same quality and dedication? 
+                Contact us today to discuss your construction needs.
+            </p>
+            <div style="display: flex; gap: var(--spacing-sm); justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+                <a href="services.html" class="btn btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Vaishnavi Buildcon</h3>
+                    <p>Building trust and delivering quality construction services with commitment, transparency, and responsibility.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/reel/DUYKZyjikwP/" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="services.html">Services</a></p>
+                    <p><a href="projects.html">Projects</a></p>
+                    <p><a href="contact.html">Contact</a></p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Services</h3>
+                    <p>Residential Construction</p>
+                    <p>Commercial Projects</p>
+                    <p>Renovation & Remodeling</p>
+                    <p>Interior Design</p>
+                    <p>Project Consultation</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Location Here</p>
+                    <p><i class="fas fa-phone"></i> +91 XXXXX XXXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@vaishnavibuildcon.com</p>
+                    <p><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vaishnavi Buildcon. All rights reserved. Built with quality and trust.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^cd \"d:\\\\Project\\\\Vaishnavi Buildcon\"; git init$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}
