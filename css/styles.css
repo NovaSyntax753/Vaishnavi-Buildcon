@@ -393,9 +393,20 @@ p {
     box-shadow: var(--shadow-gold);
 }
 
+.card-icon i {
+    color: var(--primary-dark);
+}
+
 .card h3 {
     margin-bottom: var(--spacing-sm);
     font-size: 1.5rem;
+}
+
+/* Ensure all FontAwesome icons are visible */
+i.fas, i.fab, i.far, i.fal {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands' !important;
+    font-weight: 900;
+    font-style: normal;
 }
 
 .card p {
@@ -427,6 +438,13 @@ p {
     color: var(--medium-gray);
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-section p i {
+    color: var(--primary-gold);
+    min-width: 20px;
 }
 
 .footer-section a:hover {
@@ -448,11 +466,21 @@ p {
     align-items: center;
     justify-content: center;
     transition: var(--transition-smooth);
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+.social-link i {
+    color: var(--white);
 }
 
 .social-link:hover {
     background-color: var(--primary-gold);
     transform: translateY(-3px);
+}
+
+.social-link:hover i {
+    color: var(--primary-dark);
 }
 
 .footer-bottom {
