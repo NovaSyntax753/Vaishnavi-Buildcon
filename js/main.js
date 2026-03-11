@@ -152,7 +152,7 @@ function initForms() {
     const contactForm = document.querySelector('#contact-form');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
             
             // Get form data
@@ -170,16 +170,34 @@ function initForms() {
                 return;
             }
             
-            // Simulate form submission (Replace with actual API call)
-            showNotification('Thank you! We will get back to you soon.', 'success');
-            contactForm.reset();
+            // Disable submit button
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right: 0.5rem;"></i>Sending...';
             
-            // In production, you would send the data to a server:
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(data)
-            // });
+            try {
+                // Submit to Web3Forms
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    showNotification('Thank you! Your message has been sent successfully. We will get back to you soon.', 'success');
+                    contactForm.reset();
+                } else {
+                    showNotification('Something went wrong. Please try again or contact us directly.', 'error');
+                }
+            } catch (error) {
+                showNotification('Network error. Please check your connection and try again.', 'error');
+            } finally {
+                // Re-enable submit button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+            }
         });
     }
 }
